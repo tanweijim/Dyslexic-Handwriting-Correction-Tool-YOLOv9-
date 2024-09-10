@@ -63,7 +63,7 @@ if source_radio == settings.IMAGE:
             else:
                 uploaded_image = PIL.Image.open(source_img)
                 st.image(source_img, caption="Uploaded Image",
-                         width=60)
+                         width=80)
         except Exception as ex:
             st.error("Error occurred while opening the image.")
             st.error(ex)
