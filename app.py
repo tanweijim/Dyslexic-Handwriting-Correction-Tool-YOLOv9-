@@ -32,6 +32,7 @@ class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
 
 # Read the class names and their correct positions
 dyslexic_letters_df = pd.read_csv('dyslexic_letters.csv')
+st.write(dyslexic_letters_df)
 
 # Extract the 'Class' column as keys and 'Position' as values in a dictionary
 class_position_dict = dict(zip(dyslexic_letters_df['Class'], dyslexic_letters_df['Position']))
