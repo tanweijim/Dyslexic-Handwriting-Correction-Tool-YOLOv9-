@@ -11,13 +11,13 @@ import helper
 # Setting page layout
 st.set_page_config(
     page_title="Dyslexic Handwriting Correction Tool",
-    page_icon="🤖",
+    page_icon="✏️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main page heading
-st.title("Dyslexic Handwriting Correction Tool")
+st.title("📝 Dyslexic Handwriting Correction Tool")
 
 # Sidebar
 st.sidebar.header("Image Upload")
@@ -32,7 +32,7 @@ class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
 
 # Read the class names and their correct positions
 dyslexic_letters_df = pd.read_csv('dyslexic_letters.csv')
-st.write(dyslexic_letters_df)
+#st.write(dyslexic_letters_df)
 
 # Extract the 'Class' column as keys and 'Position' as values in a dictionary
 class_position_dict = dict(zip(dyslexic_letters_df['Class'], dyslexic_letters_df['Position']))
@@ -78,7 +78,7 @@ with col2:
         st.image(default_detected_image_path, caption='Detected Image',
                  use_column_width=True)
     else:
-        if st.sidebar.button('Detect Objects'):
+        if st.sidebar.button('Detect!'):
             res = model.predict(uploaded_image, conf=confidence)
             boxes = res[0].boxes
             res_plotted = res[0].plot()[:, :, ::-1]
@@ -111,6 +111,11 @@ with col2:
 
                     position += 1
 
+                #st.write("All keys predicted:") 
+                for key in predictions_dict.keys():
+                    if key != "Unknown":
+                        st.write(key)
+                
                 # Check if the predicted letter and its position match the reference values
                 for key, value in class_position_dict.items():
                     if key in predictions_dict and predictions_dict[key] == value:
