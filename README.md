@@ -42,6 +42,7 @@ The dataset was collected from three sources (uppercase letters are from NIST Sp
 The full dataset contains a total of 78,275 for normal class, 52,196 for reversal class, and 8,029 for corrected class. For the purpose of this exercise.
 
 [1] P. J. Grother, “NIST Special Database 19,” NIST, 2016. [Online]. Available: https://www.nist.gov/srd/nist-special-database-19. [Accessed: 22-May-2019].
+
 [2] S. Patel, “A-Z Handwritten Alphabets in .csv format,” Kaggle, 2017. [Online]. Available: https://www.kaggle.com/sachinpatel21/az-handwritten-alphabets-in-csv-format. [Accessed: 22-May-2019].
 
 **References**
@@ -53,3 +54,5 @@ The full dataset contains a total of 78,275 for normal class, 52,196 for reversa
 
 4. Isa, I. S., Rahimi, W. N. S., Ramlan, S. A., & Sulaiman, S. N. (2019). Automated detection of dyslexia symptom based on handwriting image for primary school children. Procedia Computer Science, 163, 440-449.
 
+## **Streamlit App Demo**
+Click here to view Streamlit app [Coming soon!]
